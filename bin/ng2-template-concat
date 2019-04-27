@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+// -*- mode: js -*-
+
+const fs = require('fs');
+const concat = require('../lib/index.js');
+
+const program = require('commander')
+	.version('0.1.0')
+	.arguments('<file...>')
+	.option(
+		'-r, --root <path>',
+		'template root path (default: process.cwd)',
+		process.cwd()
+	)
+	.option(
+		'-o, --output <path>',
+		'output file path (default: stdout)'
+	)
+	.parse(process.argv);
+
+if(!program.args.length) {
+	program.help();
+}
+
+let js = concat.module(program.root, program.args);
+
+if(program.output) {
+	fs.writeFileSync(program.output, js);
+}
+else {
+	console.log(js);
+}

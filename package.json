@@ -1,0 +1,36 @@
+{
+  "name": "ng2-template-concat",
+  "version": "0.1.0",
+  "author": "dead-beef",
+  "contributors": [],
+  "license": "MIT",
+  "description": "Concatenate Angular 2+ templates",
+  "keywords": [
+    "cli",
+    "command",
+    "angular",
+    "template",
+    "concat"
+  ],
+  "homepage": "https://github.com/dead-beef/ng2-template-concat",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dead-beef/ng2-template-concat"
+  },
+  "bugs": {
+    "url": "https://github.com/dead-beef/ng2-template-concat/issues"
+  },
+  "main": "lib/index.js",
+  "bin": {
+    "ng2-template-concat": "bin/ng2-template-concat"
+  },
+  "dependencies": {
+    "commander": "^2.12.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.0"
+  },
+  "scripts": {
+    "lint": "eslint bin/* lib"
+  }
+}
